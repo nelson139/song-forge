@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+  .list-link {
+    @apply mr-12 text-xl font-extralight transition ease-linear hover:text-yellow-600 hover:cursor-pointer;
+  }
+  .side-menu-link {
+    @apply text-2xl font-bold transition ease-linear hover:text-yellow-400 hover:cursor-pointer hover:pl-1;
+  }
+  .form-label {
+    @apply text-left text-gray-300 text-lg font-light;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .form-input {
+    @apply outline-none text-gray-300 border-b-2 border-b-gray-300 hover:border-b-white text-lg font-light bg-transparent;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: gray;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: white;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: lightgray;
+    cursor: pointer;
+  }
 }

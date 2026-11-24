@@ -366,7 +366,7 @@ const Bottom = () => {
           {error && (
             <div
               role="alert"
-              className="panel mx-auto mt-60 max-w-48 p-5 text-sm text-center"
+              className="panel mx-auto mt-60 max-w-48 p-5 text-sm text-center text-white"
             >
               <p className="display text-lg font-bold">Search failed</p>
               <p className="mt-1">{error}</p>
